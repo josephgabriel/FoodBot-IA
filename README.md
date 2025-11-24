@@ -45,27 +45,35 @@ Sinta-se à vontade para enviar PRs, sugestões e melhorias!
 
 Como Rodar o Projeto
 1. Clonar o repositório
+```bash
 git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+cd seu-repo 
+```
 
 2. Criar ambiente virtual
+```bash
 python3 -m venv venv
 source venv/bin/activate
-
+```
 3. Instalar dependências
+```bash
 pip install -r requirements.txt
-
+```
 4. Rodar o servidor
+```bash
 uvicorn app.main:app --reload
 Servidor iniciará em:
 http://localhost:8000
-
+```
 5. Acessar o frontend
+```bash
 Abra no navegador:
 http://localhost:8000
-
+```
 6. Testar a API (Swagger)
+```bash
 http://localhost:8000/docs
+```
 
 
 
