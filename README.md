@@ -41,6 +41,7 @@ Integração com modelos de IA,
 Deploy amigável com Docker, 
 Comunicação frontend-backend.
 
+Sinta-se à vontade para enviar PRs, sugestões e melhorias!
 
 
 
