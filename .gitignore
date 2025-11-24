@@ -1,0 +1,92 @@
+# ───────────────────────────────
+# Arquivos Python
+# ───────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição / pacotes
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual env
+env/
+venv/
+ENV/
+.venv/
+
+# Logs
+*.log
+
+# Configs e segredos
+*.env
+.env.*
+secrets.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cache
+.cache/
+pytest_cache/
+pip-wheel-metadata/
+
+# Byte-compiled / cache
+*.pyo
+*.pyd
+*.pdb
+
+# Testes
+.coverage
+coverage.xml
+htmlcov/
+
+# ───────────────────────────────
+# Docker
+# ───────────────────────────────
+docker-compose.override.yml
+*.pid
+
+# ───────────────────────────────
+# Front-end (HTML/CSS/JS)
+# ───────────────────────────────
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Static builds
+/static/*
+
+# exceto sua pasta real de static (retire o ! caso não queira)
+!static/css/
+!static/js/
+!static/img/
+
+# ───────────────────────────────
+# FastAPI / Uvicorn
+# ───────────────────────────────
+*.db
+
+# SQLite (caso use)
+*.sqlite3
+
+# ───────────────────────────────
+# Outros
+# ───────────────────────────────
+.DS_Store
+Thumbs.db
