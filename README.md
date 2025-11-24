@@ -57,20 +57,16 @@ pip install -r requirements.txt
 
 4. Rodar o servidor
 uvicorn app.main:app --reload
-
-
 Servidor iniciará em:
-
 http://localhost:8000
 
 5. Acessar o frontend
-
 Abra no navegador:
-
 http://localhost:8000
 
 6. Testar a API (Swagger)
 http://localhost:8000/docs
+
 
 
 
