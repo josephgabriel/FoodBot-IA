@@ -43,6 +43,9 @@ Comunicação frontend-backend.
 
 Sinta-se à vontade para enviar PRs, sugestões e melhorias!
 
+<img width="664" height="604" alt="image" src="https://github.com/user-attachments/assets/645c768a-356b-4086-95d0-a24dfa09d921" />
+
+
 Como Rodar o Projeto
 1. Clonar o repositório
 ```bash
@@ -74,6 +77,7 @@ http://localhost:8000
 ```bash
 http://localhost:8000/docs
 ```
+
 
 
 
