@@ -10,33 +10,26 @@ O FoodBot IA é uma aplicação completa que recebe avaliações de clientes e r
 
 O backend foi construído com FastAPI, e o frontend utiliza HTML, CSS e JavaScript para consumir a API.
 
-Tecnologias Utilizadas
+***Tecnologias Utilizadas***
 
 **Backend**
 
 Python 3.10+
-
 FastAPI
-
 Pydantic
-
 Uvicorn
-
 Serviços próprios de ML (sentimento, sumário e recomendações)
-
 Integração com LLM (caso disponível)
 
 **Frontend**
 
 HTML5
-
 CSS3
-
 JavaScript (Fetch API)
 
-Outros
+**Outros**
 
 Docker & Docker Compose (opcional)
-
 CORS liberado para desenvolvimento
+
 
