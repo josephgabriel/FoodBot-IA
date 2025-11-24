@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodBot - IA</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff0022;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #f10303;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ad0505;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+        .result h2, .result h3 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>FoodBot-AI</h1>
+        <p>Envie uma avaliação e receba um resumo e recomendações automáticas.</p>
+
+        <textarea id="review" rows="5" placeholder="Digite aqui a avaliação do cliente..."></textarea>
+
+        <button onclick="sendReview()">Enviar</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+<script>
+async function sendReview() {
+    const text = document.getElementById("review").value;
+
+    if (!text.trim()) {
+        alert("Por favor, digite uma avaliação antes de enviar.");
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:8000/analyze", {
+           method: "POST",
+           headers: {"Content-Type": "application/json"},
+           body: JSON.stringify({ reviews: [text] })
+});
+
+        if (!response.ok) {
+            throw new Error("Erro ao processar a requisição");
+        }
+
+        const data = await response.json();
+
+        document.getElementById("result").innerHTML = `
+            <h2>Resultado</h2>
+            <p><strong>Positivas:</strong> ${data.sentiment_summary.positive}</p>
+            <p><strong>Negativas:</strong> ${data.sentiment_summary.negative}</p>
+            <p><strong>Neutras:</strong> ${data.sentiment_summary.neutral}</p>
+
+            <h3>Resumo</h3>
+            <p>${data.review_summary}</p>
+
+            <h3>Recomendações</h3>
+            <ul>${data.recommendations.map(r => `<li>${r}</li>`).join("")}</ul>
+        `;
+    } catch (error) {
+        console.error(error);
+        document.getElementById("result").innerHTML = `<p style="color:red;">Erro ao processar a avaliação. Tente novamente.</p>`;
+    }
+}
+</script>
+
+</body>
+</html>
