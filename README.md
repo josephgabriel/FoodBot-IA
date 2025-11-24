@@ -32,6 +32,15 @@ JavaScript (Fetch API).
 Docker & Docker Compose (opcional), 
 CORS liberado para desenvolvimento.
 
+***Objetivo do Projeto***
+
+O FoodBot IA foi criado para demonstrar:
+
+Backend moderno com FastAPI, 
+Integração com modelos de IA, 
+Deploy amigável com Docker, 
+Comunicação frontend-backend.
+
 
 
 
