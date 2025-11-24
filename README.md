@@ -14,23 +14,24 @@ O backend foi construído com FastAPI, e o frontend utiliza HTML, CSS e JavaScri
 
 **Backend**
 
-*Python 3.10+
-FastAPI
-Pydantic
-Uvicorn
-Serviços próprios de ML (sentimento, sumário e recomendações)
-Integração com LLM (caso disponível)
+Python 3.10+, 
+FastAPI, 
+Pydantic, 
+Uvicorn, 
+Serviços próprios de ML (sentimento, sumário e recomendações), 
+Integração com LLM (caso disponível).
 
 **Frontend**
 
-HTML5
-CSS3
-JavaScript (Fetch API)
+HTML5, 
+CSS3, 
+JavaScript (Fetch API).
 
 **Outros**
 
-Docker & Docker Compose (opcional)
-CORS liberado para desenvolvimento
+Docker & Docker Compose (opcional), 
+CORS liberado para desenvolvimento.
+
 
 
 
