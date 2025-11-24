@@ -14,8 +14,7 @@ O backend foi construído com FastAPI, e o frontend utiliza HTML, CSS e JavaScri
 
 **Backend**
 
-Python 3.10+
-
+*Python 3.10+
 FastAPI
 Pydantic
 Uvicorn
@@ -32,6 +31,7 @@ JavaScript (Fetch API)
 
 Docker & Docker Compose (opcional)
 CORS liberado para desenvolvimento
+
 
 
 
